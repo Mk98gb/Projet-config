@@ -7,5 +7,5 @@ then
     exit 1
 fi
 
-curl "https://wttr.in/$1" | echo > fichier_meteo
+curl -o "fichier_meteo" https://wttr.in/$1
 
