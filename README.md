@@ -13,7 +13,7 @@ Configuration d'une tâche cron :
 
 A savoir: cron est un outil qui permet d'exécuter automatiquement un script à une horaire défini.
 
-- S'assurer que les droits sont présent ou les attribuer (chmod +x Extrcateur_Mete.sh)
+- S'assurer que les droits sont présent ou les attribuer (chmod +x Extracteur_Meteo.sh)
 
 - Ouvrir cron : crontab -e
 
