@@ -1,10 +1,10 @@
 {
-    "date": "05-11-2026",
-    "heure": "16:36",
+    "date": "2026-11-05",
+    "heure": "18:53",
     "ville": "Toulouse",
-    "temperature": "15°C",
+    "temperature": "11°C",
     "prevision": "14°C",
-    "vent": "6 km/h",
+    "vent": "8 km/h",
     "humidite": "12%",
     "visibilite": "10 km" 
 }
