@@ -7,13 +7,17 @@ then
     exit 1
 fi
 
-curl -s -o "fichier_meteo" "https://wttr.in/$1?T"
+curl -s -o "fichier_meteo" "https://wttr.in/$1"
 
 # Température actuelle : premier nombre de la 1re ligne contenant °C
-TEMP_ACTUELLE=$(grep "°C" fichier_meteo | head -n 1 | grep -o -E "[-+]?[0-9]+" | head -n 1 | tr -d "+")
+LIGNE=$(grep "°C" fichier_meteo | head -n 1)
+LIGNE=$(echo "$LIGNE" | tr "\033" "\n" | cut -d "m" -f 2- | tr -d "\n")
+TEMP_ACTUELLE=$(echo "$LIGNE" | grep -o -E "[-+]?[0-9]+" | head -n 1 | tr -d "+")
 
 # Lendemain : 3e ligne contenant °C, 2e colonne (midi), premier nombre
-TEMP_LENDEMAIN=$(grep "°C" fichier_meteo | head -n 3 | tail -n 1 | grep -o "│[^│]*" | head -n 2 | tail -n 1 | grep -o -E "[-+]?[0-9]+" | head -n 1 | tr -d "+")
+LIGNE=$(grep "°C" fichier_meteo | head -n 3 | tail -n 1)
+LIGNE=$(echo "$LIGNE" | tr "\033" "\n" | cut -d "m" -f 2- | tr -d "\n")
+TEMP_LENDEMAIN=$(echo "$LIGNE" | grep -o "│[^│]*" | head -n 2 | tail -n 1 | grep -o -E "[-+]?[0-9]+" | head -n 1 | tr -d "+")
 
 TEMP_ACTUELLE="$TEMP_ACTUELLE°C"
 TEMP_LENDEMAIN="$TEMP_LENDEMAIN°C"
