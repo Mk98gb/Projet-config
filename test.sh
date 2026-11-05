@@ -25,7 +25,7 @@ TEMP_LENDEMAIN="$TEMP_LENDEMAIN°C"
 echo "Température actuelle à $1 : $TEMP_ACTUELLE"
 echo "Prévision pour demain : $TEMP_LENDEMAIN"
 
-date=$(date +"%Y-%m-%d")
+date=$(date +"%d-%m-%Y")
 heure=$(date +"%H:%M")
 
 echo "$date - $heure - $1 : $TEMP_ACTUELLE - $TEMP_LENDEMAIN" >> meteo.txt
