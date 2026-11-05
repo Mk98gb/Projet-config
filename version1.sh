@@ -6,4 +6,4 @@
 
 !/bin/bash
 
-curl https://wttr.in/ | echo > fichier local
+curl https://wttr.in/ | echo > fichier_meteo
