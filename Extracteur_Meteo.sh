@@ -47,8 +47,8 @@ VENT=$(grep "km/h" fichier_meteo | head -n 1 | grep -o -E "[0-9]+(-[0-9]+)? km/h
 VISIBILITE=$(grep " km" fichier_meteo | grep -v "km/h" | head -n 1 | grep -o -E "[0-9.]+ km")
 HUMIDITE=$(grep "%" fichier_meteo | head -n 1 | grep -o -E "[0-9]+%" | head -n 1)
 
-date_v1=$(date_v1 +"%d-%m-%Y")
-heure_v1=$(date_v1 +"%H:%M")
+date_v1=$(date +"%d-%m-%Y")
+heure_v1=$(date +"%H:%M")
 
 echo "$date_v1 - $heure_v1 - $VILLE : $TEMP_ACTUELLE - $TEMP_LENDEMAIN - Vent : $VENT - Humidité : $HUMIDITE - Visibilité : $VISIBILITE" >> meteo.txt
 
