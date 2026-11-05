@@ -30,3 +30,15 @@ date=$(date +"%d-%m-%Y")
 heure=$(date +"%H:%M")
 
 echo "$date - $heure - $VILLE : $TEMP_ACTUELLE - $TEMP_LENDEMAIN - Vent : $VENT - Humidité : $HUMIDITE - Visibilité : $VISIBILITE" >> meteo.txt
+
+#Variante 2 pour sauvegarder un fichier JSON
+echo "{
+    \"date\": \"$date\",
+    \"heure\": \"$heure\",
+    \"ville\": \"$1\",
+    \"temperature\": \"$TEMP_ACTUELLE\",
+    \"prevision\": \"$TEMP_LENDEMAIN\",
+    \"vent\": \"$VENT\",
+    \"humidite\": \"$HUMIDITE\",
+    \"visibilite\": \"$VISIBILITE\" 
+}" > meteo.json

@@ -1,0 +1,6 @@
+2026-11-05T15:35:41.098Z INFO [debugLogger] Debug log reset on extension activation
+2026-11-05T15:35:41.099Z INFO [debugLogger] Console debug routing installed
+2026-11-05T15:35:41.099Z INFO [extension.activate] Debug logger initialized
+2026-11-05T15:35:41.100Z INFO [bridgeLog] Global instrumentation installed
+2026-11-05T15:35:41.102Z INFO [extension.activate] TOM AI: no TOM AI config found (.tom/ folder missing and tomAi.configPath unset/invalid). Extension running in minimal mode.
+2026-11-05T15:35:41.117Z INFO [bridgeLog] Tom AI minimal activation in 5.75ms
